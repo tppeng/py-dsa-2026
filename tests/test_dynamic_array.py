@@ -41,3 +41,27 @@ def test_set_out_of_range_raises():
 	arr = DynamicArray()
 	with pytest.raises(IndexError):
 		arr.set(0,99)
+
+def test_pop_reduces_size_and_returns_value():
+	arr = DynamicArray()
+	arr.append(1)
+	arr.append(2)
+	arr.append(3)
+
+	assert arr.pop() == 3
+	assert len(arr) == 2
+	assert arr.pop() == 2
+	assert len(arr) == 1
+
+def test_pop_empty_raises():
+	arr = DynamicArray()
+	with pytest.raises(IndexError):arr.pop()
+
+def test_iteration_returns_valid_elements_only():
+	arr = DynamicArray()
+	arr.append("a")
+	arr.append("b")
+	arr.append("c")
+
+	assert list(arr) == ["a", "b", "c"]
+

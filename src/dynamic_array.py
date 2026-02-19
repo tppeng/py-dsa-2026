@@ -40,7 +40,19 @@ class DynamicArray:
             new_data[i] = self._data[i]
         self._data = new_data
         self._capacity = new_capacity
+
+    def pop(self):
+        if self._size == 0:
+             raise IndexError("pop from empty DynamicArray")
+        val = self._data[self._size - 1]
+        self._data[self._size - 1] = None
+        self._size -= 1
+        return val                
         
+    def __iter__(self):
+         for i in range(self._size):
+              yield self._data[i]
+                  
     @staticmethod
     def _make_array(capacity: int):
         return (ctypes.py_object * capacity)()
