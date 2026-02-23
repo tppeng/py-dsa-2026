@@ -1,4 +1,4 @@
-from src.dynamic_array import DynamicArray
+from dsa.dynamic_array import DynamicArray
 
 class Stack:
 	def __init__(self):

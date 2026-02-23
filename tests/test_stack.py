@@ -1,5 +1,5 @@
 import pytest
-from src.stack import Stack
+from dsa.stack import Stack
 
 def test_push_and_pop_lifo():
 	s = Stack()

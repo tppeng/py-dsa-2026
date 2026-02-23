@@ -1,5 +1,5 @@
 import pytest
-from src.queue_two_stack import QueueTwoStack
+from dsa.queue_two_stack import QueueTwoStack
 
 def test_enqueue_dequeue_fifo():
 	q = QueueTwoStack()

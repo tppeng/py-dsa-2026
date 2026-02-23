@@ -1,5 +1,5 @@
 import pytest
-from src.dynamic_array import DynamicArray
+from dsa.dynamic_array import DynamicArray
 
 def test_append_and_len():
 	arr = DynamicArray(initial_capacity=2)
